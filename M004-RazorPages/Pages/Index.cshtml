@@ -1,0 +1,35 @@
+﻿@*page: Route einfach per String angeben*@
+@page "/Index"
+@using M004_RazorPages.Model
+@using Microsoft.AspNetCore.Mvc.RazorPages
+
+@*inject: Dependency Injection ins Frontend*@
+@inject List<User> users
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+	@if (ViewData["user"] != null && ViewData["pw"] != null)
+	{
+		<h3>Hallo @ViewData["user"]</h3>
+		<h3>Passwort: @ViewData["pw"] (@(ViewData["pw"].ToString().Length))</h3>
+	}
+</div>
+
+@*Code aus Razor Pages kann auch in der View direkt implementiert werden*@
+@* @{
+	IActionResult OnGet()
+	{
+		return Page(); //return Page() == return View()
+	}
+
+	IActionResult OnPost()
+	{
+		return Page();
+	}
+} *@

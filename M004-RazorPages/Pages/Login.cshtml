@@ -1,0 +1,17 @@
+﻿@page "/Login"
+@model M004_RazorPages.Pages.LoginModel
+@{
+}
+
+<h3>Einloggen</h3>
+
+@*Kein asp-action notwendig, geht über OnPost*@
+<form method="post">
+	Username: <input type="text" name="Username" />  @*asp-for == name*@
+	<br />
+
+	Passwort: <input type="password" name="Passwort" />
+	<br />
+
+	<button>Login</button>
+</form>

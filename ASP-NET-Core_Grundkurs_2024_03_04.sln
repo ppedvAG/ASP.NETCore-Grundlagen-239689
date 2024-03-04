@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M002-Einführung", "M002-Einführung\M002-Einführung.csproj", "{7B51E44B-3107-460F-8F70-CECF8022E990}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M002-Einführung", "M002-Einführung\M002-Einführung.csproj", "{7B51E44B-3107-460F-8F70-CECF8022E990}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M003-MVC", "M003-MVC\M003-MVC.csproj", "{4317D523-2644-48A2-A2FC-86F3B4EF3F6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M003-MVC", "M003-MVC\M003-MVC.csproj", "{4317D523-2644-48A2-A2FC-86F3B4EF3F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M004-RazorPages", "M004-RazorPages\M004-RazorPages.csproj", "{597787C7-8820-4E42-84A1-1A2CEA78852D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4317D523-2644-48A2-A2FC-86F3B4EF3F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4317D523-2644-48A2-A2FC-86F3B4EF3F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4317D523-2644-48A2-A2FC-86F3B4EF3F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{597787C7-8820-4E42-84A1-1A2CEA78852D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597787C7-8820-4E42-84A1-1A2CEA78852D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597787C7-8820-4E42-84A1-1A2CEA78852D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597787C7-8820-4E42-84A1-1A2CEA78852D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
