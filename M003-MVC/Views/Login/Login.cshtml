@@ -1,0 +1,14 @@
+﻿@*Model: Definiert, den Datentyp der für die gesamte View verwendet wird*@
+@model LoginModel
+
+<h3>Einloggen</h3>
+
+<form asp-action="Einloggen">
+	Username: <input type="text" asp-for="Username"/>
+	<br />
+
+	Passwort: <input type="password" asp-for="Passwort"/>
+	<br />
+
+	<button>Login</button> @*Hier muss bei Button Klick der Benutzername weitergegeben werden*@
+</form>

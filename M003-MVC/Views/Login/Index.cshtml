@@ -1,0 +1,13 @@
+﻿@model LoginModel
+
+<h1>Loginportal</h1>
+
+@if (Model != null && !string.IsNullOrEmpty(Model.Username) && !string.IsNullOrEmpty(Model.Passwort))
+{
+	<h3>Hallo @Model</h3>
+	<h3>Passwort: @Model.Passwort.Select(e => "*") @(Model.Passwort.Length)</h3>
+}
+
+<a asp-action="Login">Login</a>
+<br/>
+<a asp-action="Registrieren">Registrieren</a>
