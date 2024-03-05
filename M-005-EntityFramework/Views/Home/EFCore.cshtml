@@ -1,0 +1,18 @@
+﻿@using M_005_EntityFramework.Models.DB
+@model List<Customer>
+
+<h1>Customer aus UK</h1>
+
+<table>
+	<thead>
+		<tr>CustomerID</tr>
+	</thead>
+	<tbody>
+		@foreach (Customer c in Model)
+		{
+			<tr>
+				<td>@c.CustomerId</td>
+			</tr>
+		}
+	</tbody>
+</table>

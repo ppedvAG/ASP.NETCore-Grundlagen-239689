@@ -1,4 +1,4 @@
-using M004_RazorPages.Model;
+using M004_RazorPages.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

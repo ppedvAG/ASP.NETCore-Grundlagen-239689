@@ -1,0 +1,8 @@
+﻿@using M_005_EntityFramework.Models.DB
+@model List<Tuple<Order, Customer>>
+
+<h1>Bestellungen + Kunde zu jeder Bestellung</h1>
+@foreach (Tuple<Order, Customer> t in Model)
+{
+	<label>@t.Item1.OrderId</label> <label>@t.Item2.ContactName</label>
+}

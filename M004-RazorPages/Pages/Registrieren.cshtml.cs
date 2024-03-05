@@ -1,4 +1,4 @@
-using M004_RazorPages.Model;
+using M004_RazorPages.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 

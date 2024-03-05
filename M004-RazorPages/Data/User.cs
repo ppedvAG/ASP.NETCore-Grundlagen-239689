@@ -1,4 +1,4 @@
-﻿namespace M004_RazorPages.Model;
+﻿namespace M004_RazorPages.Data;
 
 public class User
 {
