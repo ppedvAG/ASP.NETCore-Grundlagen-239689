@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M004-RazorPages", "M004-Raz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M005-EntityFramework", "M-005-EntityFramework\M005-EntityFramework.csproj", "{20527870-744B-4EE3-AD90-BF881D3F4503}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M006_EFListen", "M-006_EFListen\M006_EFListen.csproj", "{E14EC465-BF6B-4672-B9B2-47FF3DB4F8B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M006_Data", "M006_Data\M006_Data.csproj", "{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{20527870-744B-4EE3-AD90-BF881D3F4503}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20527870-744B-4EE3-AD90-BF881D3F4503}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20527870-744B-4EE3-AD90-BF881D3F4503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E14EC465-BF6B-4672-B9B2-47FF3DB4F8B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E14EC465-BF6B-4672-B9B2-47FF3DB4F8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E14EC465-BF6B-4672-B9B2-47FF3DB4F8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E14EC465-BF6B-4672-B9B2-47FF3DB4F8B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

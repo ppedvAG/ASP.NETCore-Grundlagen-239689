@@ -1,0 +1,29 @@
+﻿@using System.Reflection
+@model IEnumerable<object>
+
+<table>
+	<thead>
+		<tr>
+			@*Reflection*@
+			@*Zur Laufzeit, Erfassung von allen möglichen Informationen über einen Typen*@
+			@{
+				PropertyInfo[] prop = Model.First().GetType().GetProperties().Where(e => e.PropertyType.GetInterface("IEnumerable") != null).ToArray();
+				@foreach (PropertyInfo info in prop)
+				{
+					<th>@info.Name</th>
+				}
+			}
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (object o in Model)
+		{
+			<tr>
+				@foreach (PropertyInfo info in prop)
+				{
+					<td>@info.GetValue(o)</td>
+				}
+			</tr>
+		}
+	</tbody>
+</table>

@@ -1,0 +1,23 @@
+﻿@model List<Order>
+
+<table>
+	<thead>
+		<tr>
+			<th>@Html.DisplayNameFor(e => e[0].CustomerId)</th>
+			<th>Kunde</th>
+			<th>Bestelldatum</th>
+			<th>Frachtkosten</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Order o in Model)
+		{
+			<tr>
+				<td>@o.OrderId</td>
+				<td>@o.CustomerId</td>
+				<td>@o.OrderDate</td>
+				<td>@o.Freight</td>
+			</tr>
+		}
+	</tbody>
+</table>
