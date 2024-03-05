@@ -10,8 +10,9 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddDbContext<NorthwindContext>(); //ConnectionString in DbContext
 
 //Der ConnectionString sollte nicht in der Context Klasse stehen, sondern in einer Config (appsettings.json)
-builder.Services.AddDbContext<NorthwindContext>(
-	e => e.UseSqlServer(builder.Configuration.GetConnectionString("Northwind"))); //Hier wird der ConnectionString per Lambda-Expression aus der Config entnommen
+string connString = builder.Configuration.GetConnectionString("Northwind");
+builder.Services.AddDbContext<NorthwindContext>(e => e.UseSqlServer(connString)); //Hier wird der ConnectionString per Lambda-Expression aus der Config entnommen
+builder.Services.AddSqlServer<NorthwindContext>(connString);
 
 var app = builder.Build();
 
