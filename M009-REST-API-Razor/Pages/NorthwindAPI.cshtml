@@ -1,0 +1,12 @@
+﻿@page "/api/northwind"
+@using M006_Data.Models
+@model NorthwindAPIModel
+@inject NorthwindContext db
+
+@{
+	[Route("api/northwind/customers")]
+	IEnumerable<Customer> OnGet()
+	{
+		return db.Customers.AsEnumerable();
+	}
+}

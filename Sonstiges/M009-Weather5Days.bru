@@ -1,0 +1,28 @@
+meta {
+  name: M009-Weather5Days
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://localhost:7777/api/northwind/customer/submit
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "customerId": "PPEDV",
+    "companyName": "ppedv AG",
+    "contactName": "Lukas Kern",
+    "contactTitle": "Sales Representative",
+    "address": "Obere Str. 57",
+    "city": "Berlin",
+    "region": null,
+    "postalCode": "12209",
+    "country": "Germany",
+    "phone": "030-00743212",
+    "fax": "030-0076545",
+    "orders": []
+  }
+}
