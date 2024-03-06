@@ -1,0 +1,42 @@
+﻿@using M006_Data.Models
+@model List<Customer>
+
+@* Von einem bestimmten Customer alle Bestellungen anzeigen *@
+<h3>Alle Kunden</h3>
+
+@*Bei einer Form wird der name der Form Elemente (input, select, ...) an die unterliegende Methode weitergegeben*@
+<form method="get" asp-action="ShowAllCustomers">
+	Land: <input type="text" name="country"/>
+	<button>Speichern</button>
+</form>
+
+@* @await Html.PartialAsync("ShowAnyData", Model) *@
+
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Firma</th>
+			<th>TelNr.</th>
+			<th>Land</th>
+			<th>Bestellungen</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Customer c in Model)
+		{
+			<tr>
+				<td>@c.CustomerId</td>
+				<td>@c.ContactName</td>
+				<td>@c.CompanyName</td>
+				<td>@c.Phone</td>
+				<td>@c.Country</td>
+				<td>
+					<a asp-action="ShowOrdersFor" asp-route-customerID="@c.CustomerId">Bestellungen anzeigen</a>
+					<a asp-action="CustomerBearbeiten" asp-route-customerID="@c.CustomerId">Kunde bearbeiten</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

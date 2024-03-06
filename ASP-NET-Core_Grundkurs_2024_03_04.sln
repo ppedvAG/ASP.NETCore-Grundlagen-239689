@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M006_EFListen", "M-006_EFLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M006_Data", "M006_Data\M006_Data.csproj", "{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M007-BindingFormsValidierung", "M007-BindingFormsValidierung\M007-BindingFormsValidierung.csproj", "{5EEFC7DC-F149-4EBC-9EC7-33736D1ADAFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3194FF71-6A3F-4D0D-B7C4-F21ADCB47D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EEFC7DC-F149-4EBC-9EC7-33736D1ADAFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EEFC7DC-F149-4EBC-9EC7-33736D1ADAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EEFC7DC-F149-4EBC-9EC7-33736D1ADAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EEFC7DC-F149-4EBC-9EC7-33736D1ADAFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

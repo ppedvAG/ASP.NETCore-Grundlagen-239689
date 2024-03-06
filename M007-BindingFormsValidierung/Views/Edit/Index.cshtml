@@ -1,0 +1,34 @@
+﻿@using System.Reflection
+@using M006_Data.Models
+@model string
+@inject NorthwindContext db
+
+<h3>Kunde: @Model</h3>
+<form asp-action="Save">
+	<ul>
+		@{
+			Customer c = db.Customers.First(e => e.CustomerId == Model);
+			<li>
+				<label>@c.CustomerId</label>
+				<input type="text" asp-for="@c.CustomerId" />
+			</li>
+			<li>
+				<label>@c.ContactName</label>
+				<input type="text" asp-for="@c.ContactName" />
+			</li>
+			<li>
+				<label>@c.CompanyName</label>
+				<input type="text" asp-for="@c.CompanyName" />
+			</li>
+			<li>
+				<label>@c.Phone</label>
+				<input type="text" asp-for="@c.Phone" />
+			</li>
+			<li>
+				<label>@c.Country</label>
+				<input type="text" asp-for="@c.Country" />
+			</li>
+		}
+	</ul>
+	<button>Speichern</button>
+</form>
