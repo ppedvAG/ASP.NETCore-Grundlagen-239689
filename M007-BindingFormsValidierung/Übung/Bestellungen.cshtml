@@ -1,0 +1,39 @@
+﻿@page "/BestellungErstellen"
+@using M006_Data.Models
+@model BestellungenModel
+@inject NorthwindContext db
+@{
+	Order o = new();
+}
+
+<form method="post" asp-page-handler="OnPost">
+	<ul>
+		<li>
+			OrderId: 
+			<input type="number" asp-for="@o.OrderId" />
+			<span asp-validation-for="@o.OrderId" />
+		</li>
+		<li>
+			CustomerID:
+			<input type="text" asp-for="@o.CustomerId" />
+			<span asp-validation-for="@o.CustomerId" />
+		</li>
+		<li>
+			EmployeeID:
+			<input type="number" asp-for="@o.EmployeeId" />
+			<span asp-validation-for="@o.EmployeeId" />
+		</li>
+		<li>
+			OrderDate:
+			<input type="date" asp-for="@o.OrderDate" />
+			<span asp-validation-for="@o.OrderDate"/>
+		</li>
+	</ul>
+	<button>Speichern</button>
+</form>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

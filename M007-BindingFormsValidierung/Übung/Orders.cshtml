@@ -1,0 +1,41 @@
+﻿@page "/Orders"
+@using M006_Data.Models
+@using System.Reflection
+@model OrdersModel
+@inject NorthwindContext db
+
+<table>
+	<thead>
+		<tr>
+			@{
+				IEnumerable<Order> orders = db.Orders;
+				PropertyInfo[] prop = orders.First().GetType().GetProperties().ToArray();
+				@foreach (PropertyInfo info in prop)
+				{
+					<th>@info.Name</th>
+				}
+			}
+		</tr>
+		<tr>
+			<th>
+				Bestellung bearbeiten
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (object o in orders)
+		{
+			<tr>
+				@foreach (PropertyInfo info in prop)
+				{
+					<td>@info.GetValue(o)</td>
+				}
+			</tr>
+		}
+		<tr>
+			<td>
+				<a asp-page="BestellungBearbeiten" asp-route-id="OrderId"/>
+			</td>
+		</tr>
+	</tbody>
+</table>

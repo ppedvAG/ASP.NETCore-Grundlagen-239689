@@ -1,0 +1,34 @@
+﻿@page "/BestellungBearbeiten"
+@using M006_Data.Models
+@model BestellungBearbeitenModel
+@inject NorthwindContext db
+
+<h3>Kunde: @Model.o</h3>
+<form asp-action="Save">
+	<ul>
+		@{
+			<li>
+				<label>CustomerId</label>
+				<input type="text" asp-for="@Model.o.OrderId" />
+				@*Validierung durchführen (Einschränkungen setzen per DataAnnotations in der Model Klasse)*@
+				@*z.B. StringLength, Range, Required, ...*@
+				@*Validierungstext anzeigen mittels asp-validation-for*@
+				<span asp-validation-for="@Model.o.OrderId" />
+			</li>
+			@*...*@
+		}
+	</ul>
+	<div asp-validation-summary="ModelOnly">
+		@*Validiert alle Felder, außer die die nicht in der View zu sehen sind*@
+	</div>
+	<button>Speichern</button>
+</form>
+
+@*Section: Legt ein Stück HTML/C#/JS Code lokal in der Page*@
+@*Kann in Folge im _Layout.cshtml eingebunden werden*@
+@*_Layout.cshtml: @await RenderSectionAsync("Scripts", required: false)*@
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
