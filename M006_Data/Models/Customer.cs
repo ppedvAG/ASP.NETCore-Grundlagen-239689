@@ -16,7 +16,7 @@ public partial class Customer
 {
     [Key]
     [Column("CustomerID")]
-    [StringLength(5)]
+    [StringLength(5, MinimumLength = 5, ErrorMessage = "Customer ID muss genau 5 Zeichen haben!")]
     public string CustomerId { get; set; }
 
     [Required]

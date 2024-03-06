@@ -1,6 +1,7 @@
 using M006_Data.Models;
 using M007_BindingFormsValidierung.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace M007_BindingFormsValidierung.Controllers
@@ -26,9 +27,13 @@ namespace M007_BindingFormsValidierung.Controllers
 			return View();
 		}
 
-		public IActionResult Privacy()
+		[HttpGet]
+		//[ActionName("Privacy")] //Benennt die Methode für die GUI (asp-action) um
+		public async Task<IActionResult> ShowAllCustomers(string country)
 		{
-			return View("ShowAllCustomers", db.Customers.ToList());
+			if (country != null)
+				return View(await db.Customers.Where(e => e.Country == country).ToListAsync());
+			return View(await db.Customers.ToListAsync());
 		}
 
 		/// <summary>
@@ -36,7 +41,7 @@ namespace M007_BindingFormsValidierung.Controllers
 		/// </summary>
 		public IActionResult CustomerBearbeiten(string customerID)
 		{
-			return RedirectToAction("Index", "Edit", customerID);
+			return RedirectToAction("Index", "Edit", new { customerID = customerID });
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
